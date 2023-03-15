@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
 }
 
 .wrapper {
@@ -11,11 +12,53 @@
 .card {
   display: flex;
   flex-direction: column;
+  font-size: 18px;
 }
 
 .result {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(
+    180deg,
+    hsl(252, 100%, 67%) 0%,
+    hsl(241, 81%, 54%) 100%
+  );
+  color: hsl(241, 100%, 89%);
+  border-radius: 0 0 2rem 2rem;
+}
+
+.result-score {
+  background: linear-gradient(
+    180deg,
+    hsla(256, 72%, 46%, 1) 0%,
+    hsla(241, 72%, 46%, 0) 100%
+  );
+  border-radius: 1000px;
+  width: 143px;
+  aspect-ratio: 1 /1;
+  padding-top: 1.5rem;
+}
+
+.result-user-score {
+  color: white;
+  font-weight: 700;
+  font-size: 54px;
+}
+
+.result-subtitle {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.result-comparison {
+  font-size: 16px;
+  width: 80%;
+  padding-bottom: 1rem;
 }
 
 .summary {
@@ -31,4 +74,9 @@
 .reaction {
   background-color: hsla(0, 100%, 67%, 0.1);
   color: hsl(0, 100%, 67%);
+}
+
+.continue {
+  background-color: hsl(224, 30%, 27%);
+  width: 100%;
 }
