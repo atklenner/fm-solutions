@@ -10,6 +10,7 @@
 
   --clr-primary-100: hsl(30, 38%, 92%);
   --clr-primary-200: hsl(158, 36%, 37%);
+  --clr-secondary-200: hsl(158, 36%, 20%);
 
   --clr-neutral-100: hsl(0, 0%, 100%);
   --clr-neutral-200: hsl(228, 12%, 48%);
@@ -28,6 +29,16 @@ body {
     place-content: center;
     min-height: 100vh;
   }
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 .card {
@@ -105,4 +116,9 @@ body {
   border-radius: 0.5rem;
   padding: 1rem;
   font-weight: var(--fw-bold);
+}
+
+.button:hover,
+.button:focus-visible {
+  background: var(--clr-secondary-200);
 }
