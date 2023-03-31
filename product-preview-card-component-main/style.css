@@ -5,7 +5,7 @@
   --fw-default: 500;
   --fw-bold: 700;
 
-  --fs-400: 14px;
+  --fs-400: 0.875rem;
   --fs-900: 2rem;
 
   --clr-primary-100: hsl(30, 38%, 92%);
@@ -21,14 +21,11 @@ body {
   background: var(--clr-primary-100);
   color: var(--clr-neutral-200);
   font-family: var(--font-primary);
-}
-
-@media (min-width: 600px) {
-  body {
-    display: grid;
-    place-content: center;
-    min-height: 100vh;
-  }
+  font-size: var(--fs-400);
+  font-weight: var(--fw-default);
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
 }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -44,10 +41,10 @@ body {
 .card {
   background: var(--clr-neutral-100);
   display: grid;
-  max-width: 42rem;
+  max-width: 600px;
   overflow: hidden;
   border-radius: 1rem;
-  margin: 1.5rem 1rem;
+  margin: 1rem;
 }
 
 @media (min-width: 600px) {
@@ -61,29 +58,28 @@ body {
   padding: 1.5rem;
   display: grid;
   gap: 1rem;
-  align-content: start;
 }
 
 @media (min-width: 600px) {
   .item {
-    padding: 2.5rem;
-    gap: 2rem;
+    padding: 2rem;
   }
 }
 
 .item-category {
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.4em;
 }
 
 .item-name {
   font-family: var(--font-secondary);
   font-size: var(--fs-900);
   color: var(--clr-neutral-300);
+  line-height: 1.1;
 }
 
 .item-description {
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 .item-description span {
@@ -92,8 +88,7 @@ body {
 
 .item-price {
   display: flex;
-  justify-content: start;
-  gap: 2rem;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -112,10 +107,16 @@ body {
   cursor: pointer;
   background: var(--clr-primary-200);
   color: var(--clr-neutral-100);
-  text-align: center;
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 0.75em 1.5em;
   font-weight: var(--fw-bold);
+  border: 0;
+
+  /* this is what I wanted */
+  display: inline-flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .button:hover,
