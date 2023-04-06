@@ -1,0 +1,120 @@
+/* .bg-white .bg-accent .color-accent then set --clr-accent to --accent-1 etc. */
+:root {
+  --accent-1: hsl(31, 77%, 52%);
+  --accent-2: hsl(184, 100%, 22%);
+  --accent-3: hsl(179, 100%, 13%);
+
+  --clr-primary-200: hsl(0, 0%, 95%);
+  --clr-primary-400: hsla(0, 0%, 100%, 0.75);
+
+  --font-base: "Lexend Deca", sans-serif;
+  --font-accent: "Big Shoulders Display", cursive;
+
+  --fs-400: 0.9375rem;
+
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+body {
+  font-family: var(--font-base);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-400);
+  background-color: var(--clr-primary-200);
+  color: var(--clr-primary-400);
+
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+}
+
+/* composition */
+
+.grid-flow {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+@media (min-width: 900px) {
+  .grid-flow {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+.section-grid {
+  display: grid;
+  gap: 1.625rem;
+}
+
+/* utility */
+
+section[data-accent="accent-1"] {
+  --clr-accent: var(--accent-1);
+}
+
+section[data-accent="accent-2"] {
+  --clr-accent: var(--accent-2);
+}
+
+section[data-accent="accent-3"] {
+  --clr-accent: var(--accent-3);
+}
+
+.bg-accent {
+  background-color: var(--clr-accent);
+}
+
+.padding-lg {
+  padding: 2.875rem;
+}
+
+.line-height {
+  line-height: 1.6;
+}
+
+/* block */
+
+.card {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 600px;
+}
+
+@media (min-width: 900px) {
+  .card {
+    max-width: 915px;
+    min-height: 500px;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+}
+
+.section-title {
+  font-family: var(--font-accent);
+  color: var(--clr-primary-200);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.link {
+  display: inline-block;
+  padding: 0.625rem 1.75rem;
+  margin-top: 1.625rem;
+  border-radius: 100vw;
+  text-decoration: none;
+  background-color: var(--clr-primary-200);
+  border: 2px solid var(--clr-primary-200);
+  color: var(--clr-accent);
+}
+
+.link:is(:hover, :focus-visible) {
+  background-color: var(--clr-accent);
+  color: var(--clr-primary-200);
+}
