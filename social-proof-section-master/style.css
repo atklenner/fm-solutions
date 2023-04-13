@@ -1,0 +1,121 @@
+:root {
+  --font-base: "League Spartan", sans-serif;
+
+  --clr-primary-500: hsl(333, 80%, 67%);
+  --clr-primary-700: hsl(300, 43%, 22%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-200: hsl(300, 24%, 96%);
+  --clr-neutral-300: hsl(303, 10%, 53%);
+
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
+  --fs-900: 2.5rem;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
+}
+@media (min-width: 900px) {
+  :root {
+    --fs-900: 3rem;
+  }
+}
+
+/* globals */
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-family: var(--font-base);
+  font-weight: var(--fw-500);
+  font-size: var(--fs-400);
+}
+
+main {
+  display: grid;
+  gap: 3rem;
+  margin-inline: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* composition */
+.flex-group {
+  display: flex;
+  gap: 2rem;
+}
+
+/* utility */
+.max-radius {
+  border-radius: 100vw;
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+.fs-500 {
+  font-size: var(--fs-500);
+}
+.fs-900 {
+  font-size: var(--fs-900);
+}
+
+/* block */
+
+.lead {
+  text-align: center;
+}
+
+.lead > h2 {
+  color: var(--clr-primary-700);
+  line-height: 1;
+  margin-block-end: 1rem;
+}
+
+.lead > p {
+  color: var(--clr-neutral-300);
+  font-size: var(--fs-500);
+}
+
+.ratings {
+  display: grid;
+  gap: 1rem;
+}
+
+.rating {
+  font-weight: var(--fw-700);
+  color: var(--clr-primary-700);
+  text-align: center;
+  background-color: var(--clr-neutral-200);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.quotes {
+  display: grid;
+  gap: 1rem;
+}
+
+.quote {
+  background-color: var(--clr-primary-700);
+  color: var(--clr-neutral-100);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.quote-info {
+  display: flex;
+  gap: 2rem;
+  margin-block-end: 1rem;
+}
+
+.quote-author > span {
+  color: var(--clr-primary-500);
+  display: block;
+}
+
+/* exceptions */
