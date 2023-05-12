@@ -26,14 +26,16 @@
 /* globals */
 
 body {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
   font-family: var(--font-base);
   font-weight: var(--fw-500);
   font-size: var(--fs-400);
-  margin-inline: 1.5rem;
-  margin-block: 5rem;
+
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+
+  padding-inline: 1.5rem;
+  padding-block: 5rem;
 }
 
 main {
@@ -141,8 +143,16 @@ ul {
 
 @media (min-width: 900px) {
   main {
-    max-inline-size: 1200px;
+    max-inline-size: 1100px;
     grid-template-columns: 1fr 1fr;
+  }
+
+  h2 {
+    max-inline-size: 15ch;
+  }
+
+  p {
+    max-inline-size: 40ch;
   }
 
   .lead {
