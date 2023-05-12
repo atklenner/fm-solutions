@@ -52,8 +52,15 @@ body {
 
   display: grid;
   place-content: center;
+  min-height: 100vh;
 
   background-color: hsl(var(--clr-neutral-300));
+}
+
+main {
+  display: grid;
+  row-gap: 1.5rem;
+  max-inline-size: 1100px;
 }
 
 h2 {
@@ -62,13 +69,6 @@ h2 {
 }
 
 /* Utility */
-
-.stack {
-  --gap: 1.5rem;
-
-  display: grid;
-  gap: var(--gap);
-}
 
 .bg-primary-400 {
   background-color: hsl(var(--clr-primary-400));
@@ -101,7 +101,8 @@ h2 {
 /* Blocks */
 
 .card {
-  --gap: 1rem;
+  display: grid;
+  gap: 1rem;
 
   padding: 2rem;
   border-radius: 0.5rem;
@@ -133,4 +134,20 @@ h2 {
   opacity: 0.5;
   display: block;
   font-size: var(--fs--1);
+}
+
+@media (min-width: 900px) {
+  main {
+    grid-auto-columns: 1fr;
+    column-gap: 2rem;
+  }
+
+  .col-span-2 {
+    grid-column: span 2;
+  }
+
+  .row-span-2 {
+    grid-row: 1 / span 2;
+    grid-column-start: 4;
+  }
 }
