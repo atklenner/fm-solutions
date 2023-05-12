@@ -26,6 +26,11 @@
 /* globals */
 
 body {
+  background-image: url(./images/bg-pattern-top-mobile.svg),
+    url(./images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top left, bottom right;
+
   font-family: var(--font-base);
   font-weight: var(--fw-500);
   font-size: var(--fs-400);
@@ -142,6 +147,11 @@ ul {
 }
 
 @media (min-width: 900px) {
+  body {
+    background-image: url(./images/bg-pattern-top-desktop.svg),
+      url(./images/bg-pattern-bottom-desktop.svg);
+  }
+
   main {
     max-inline-size: 1100px;
     grid-template-columns: 1fr 1fr;
