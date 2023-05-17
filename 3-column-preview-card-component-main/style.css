@@ -26,6 +26,7 @@ body {
   display: grid;
   place-items: center;
   margin-inline: 1.5rem;
+  min-block-size: 100vh;
 }
 
 /* composition */
